@@ -13,10 +13,10 @@ function App() {
       "
       >
         <header className=" ">
-          <Navbar bg="dark">
+          <Navbar bg="dark" variant="white">
             <Container>
               <LinkContainer to="/">
-                <Navbar.Brand>Amazona</Navbar.Brand>
+                <Navbar.Brand className="text-white">Amazona</Navbar.Brand>
               </LinkContainer>
             </Container>
           </Navbar>
