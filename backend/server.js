@@ -8,6 +8,15 @@ app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
 
+app.get('/api/products/slug/:slug', (req, res) => {
+  const product = data.products.find((x) => x.slug === req.params.slug);
+  if (product) {
+    res.send(product);
+  } else {
+    res.status(404).send('Product Not found');
+  }
+});
+
 app.listen(port, () => {
   console.log(`server is running at http://localhost:${port}`);
 });
